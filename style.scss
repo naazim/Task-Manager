@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html,body {
+    height:100%;
+    width:100%;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eaeaea;
+    font-size: 14px;
+    display: flex;
+}
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-bottom: 20px;
+    margin-top: -50px;
+}
+#container {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    max-width: 450px;
+}
+.input-wrapper {
+    height: 50px;
+    border: 2px solid #44a948;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+#add-btn,
+.delete-btn {
+    background-color: #44a948;
+    position: absolute;
+    right: -54px;
+    top: 0;
+    height: 100%;
+    width: 52px;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    text-indent: 1px;
+    line-height: 1.8;
+    z-index: 0;
+    transition: .3s right 0.3s ease;
+}
+#task-input {
+    font-size: 1em;
+    min-width: 300px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    height: 100%;
+    padding: 0 60px 0 18px;
+    box-sizing: border-box;
+}
+#task-input:focus + #add-btn {
+    z-index: 1;
+    right: 0;
+}
+.task {
+    border: 2px solid #ccc;
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px 0 18px;
+    position: relative;
+    overflow: hidden;
+    transition: border 0.3s ease;
+}
+.task + .task {
+    margin-top: -2px;
+}
+.delete-btn {
+    background-color: #E0202F;
+  transition-delay: 0;
+}
+.task:hover {
+    border: 2px solid #E0202F;
+    z-index: 1;
+}
+.task:hover .delete-btn {
+    z-index: 1;
+    right: 0;
+}
+.task-text { 
+  text-align: left;
+}
